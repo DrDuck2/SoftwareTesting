@@ -1,4 +1,4 @@
-import JPetStore.RegisterUserBuilder;
+import JPetStore.UserRegistrationBuild.RegisterUserDirector;
 import JPetStore.pages.RegisterPage;
 import JPetStore.pages.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -38,53 +38,28 @@ public class DatabaseTest {
     @Test
     @Parameters({"username","password"})
     private void loginRegistrationDatabaseSequenceTest(String username, String password){
-        // TEST 1 //
 
+        // TEST 1 -> Trying to log in with wrong credentials //
 
         loginPage.login(username, password);
 
         Assert.assertTrue(loginPage.isLoginButtonDisplayed(), "Login was successful with false information.");
 
-        // TEST 2 //
+        // TEST 2 -> Registering with the wrong credentials //
 
         loginPage.clickRegister();
 
-        //Register information
 
-        String firstName = "testName";
-        String lastName = "testSurname";
-        String email = "testEmail@gmail.com";
-        String phone = "123456789";
-        String address1 = "Test street 1";
-        String city = "testCity";
-        String state = "OS";
-        String zip = "12345";
-        String country = "Croatia";
+        RegisterUserDirector registerUserDirector = new RegisterUserDirector();
+        registerUserDirector.createMinimumRequirementsTestUser(username,password,registerPage);
 
-        ///////////////////////////////////
-
-        RegisterUserBuilder registerUserBuilder = new RegisterUserBuilder();
-        registerUserBuilder.userId(username);
-        registerUserBuilder.password(password);
-        registerUserBuilder.firstName(firstName);
-        registerUserBuilder.lastName(lastName);
-        registerUserBuilder.email(email);
-        registerUserBuilder.phone(phone);
-        registerUserBuilder.address1(address1);
-        registerUserBuilder.city(city);
-        registerUserBuilder.state(state);
-        registerUserBuilder.zip(zip);
-        registerUserBuilder.country(country);
-
-        registerUserBuilder.build(registerPage);
 
         Assert.assertTrue(registerPage.isRegistrationSuccessful(), "Registration was not successful");
 
-        //Have to return to login page
-
+        //Return to original login page
         driver.navigate().to(testURL);
 
-        // TEST 3 //
+        // TEST 3 -> Log in with the previous credentials //
         loginPage.login(username, password);
 
         Assert.assertFalse(loginPage.isLoginButtonDisplayed(), "Login has failed");
@@ -94,5 +69,4 @@ public class DatabaseTest {
     public void teardownTest(){
         driver.quit();
     }
-
 }

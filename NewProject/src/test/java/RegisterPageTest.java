@@ -1,4 +1,5 @@
-import JPetStore.RegisterUserBuilder;
+import JPetStore.UserRegistrationBuild.RegisterUserBuilder;
+import JPetStore.UserRegistrationBuild.RegisterUserDirector;
 import JPetStore.pages.RegisterPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -33,31 +34,15 @@ public class RegisterPageTest {
 
     @Test
     @Parameters("username")
-    public void registrationSuccessProcessTest(String username){
-        //Registration form information
+    public void registrationSuccessTest(String username){
 
         //Considering that the "username" is unique and is not inside the database.
         // Database resets every 10 minutes.
 
-        String password = "testpassword";
-        String firstName = "testName";
-        String lastName = "testSurname";
-        String email = "testEmail@gmail.com";
-        String phone = "123456789";
-        String address1 = "Test street 1";
-        String address2 = "Test street 2";
-        String city = "testCity";
-        String state = "OS";
-        String zip = "12345";
-        String country = "Croatia";
-        String languagePreference = "english";
-        String favoriteCategoryId = "DOGS";
-        boolean enableMyList = false;
-        boolean enableMyBanner = false;
+        String password = "password";
 
-        ///////////////////////////////
-
-        registerPage.registerUser(username,password,firstName,lastName,email,phone,address1,address2,city,state,zip,country,languagePreference,favoriteCategoryId,enableMyList,enableMyBanner);
+        RegisterUserDirector registerUserDirector = new RegisterUserDirector();
+        registerUserDirector.createFullRequirementsTestUser(username,password,registerPage);
 
         boolean registrationSuccessful = registerPage.isRegistrationSuccessful();
 
@@ -77,12 +62,12 @@ public class RegisterPageTest {
         ///////////////////////////////
 
         RegisterUserBuilder registerUserBuilder = new RegisterUserBuilder();
-        registerUserBuilder.firstName(firstName);
-        registerUserBuilder.lastName(lastName);
-        registerUserBuilder.city(city);
-        registerUserBuilder.favoriteCategoryId(favoriteCategoryId);
-        registerUserBuilder.enableList(enableMyList);
-        registerUserBuilder.build(registerPage);
+        registerUserBuilder.setFirstName(firstName)
+                .setLastName(lastName)
+                .setCity(city)
+                .setFavoriteCategoryId(favoriteCategoryId)
+                .setEnableList(enableMyList)
+                .Build(registerPage);
 
         boolean registrationSuccessful = registerPage.isRegistrationSuccessful();
 
@@ -92,37 +77,14 @@ public class RegisterPageTest {
     @Test
     @Parameters("username")
     public void registrationWithRequiredInput(String username){
-        //Registration form information
 
         //Considering that the "username" is unique and is not inside the database.
         // Database resets every 10 minutes.
-        String password = "testpassword";
-        String firstName = "testName";
-        String lastName = "testSurname";
-        String email = "testEmail@gmail.com";
-        String phone = "123456789";
-        String address1 = "Test street 1";
-        String city = "testCity";
-        String state = "OS";
-        String zip = "12345";
-        String country = "Croatia";
 
-        ///////////////////////////////
+        String password = "password";
 
-        RegisterUserBuilder registerUserBuilder = new RegisterUserBuilder();
-        registerUserBuilder.userId(username);
-        registerUserBuilder.password(password);
-        registerUserBuilder.firstName(firstName);
-        registerUserBuilder.lastName(lastName);
-        registerUserBuilder.email(email);
-        registerUserBuilder.phone(phone);
-        registerUserBuilder.address1(address1);
-        registerUserBuilder.city(city);
-        registerUserBuilder.state(state);
-        registerUserBuilder.zip(zip);
-        registerUserBuilder.country(country);
-
-        registerUserBuilder.build(registerPage);
+        RegisterUserDirector registerUserDirector = new RegisterUserDirector();
+        registerUserDirector.createMinimumRequirementsTestUser(username,password,registerPage);
 
         boolean registrationSuccessful = registerPage.isRegistrationSuccessful();
 

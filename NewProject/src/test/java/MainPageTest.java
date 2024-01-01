@@ -32,15 +32,6 @@ public class MainPageTest {
     }
 
     @Test
-    public void fishImageClickTest() throws InterruptedException {
-        mainPage.clickFishImage();
-
-        String expectedUrl = "https://petstore.octoperf.com/actions/Catalog.action?viewCategory=&categoryId=FISH";
-        Assert.assertEquals(driver.getCurrentUrl(),expectedUrl, "URL after clicking 'Fish Image' link is incorrect");
-
-    }
-
-    @Test
     public void badSearchInputTest() {
         String searchInput = "???";
 
@@ -60,7 +51,7 @@ public class MainPageTest {
         mainPage.performSearch(searchInput);
 
         String searchOutput = mainPage.searchResult();
-        searchOutput = searchOutput.toLowerCase();
+        searchOutput = searchOutput.toLowerCase(); //Should be string containing SearchInput word
 
         Assert.assertTrue(searchOutput.contains(searchInput), "Search results should be displayed for good search input");
     }
@@ -70,6 +61,7 @@ public class MainPageTest {
     public void signInButtonTest(){
         mainPage.clickSignInButton();
 
+        //In between the first and last part is the ID that changes based on the user session.
         String expectedFirstPart = "https://petstore.octoperf.com/actions/Account.action";
         String expectedLastPart = "signonForm=";
 

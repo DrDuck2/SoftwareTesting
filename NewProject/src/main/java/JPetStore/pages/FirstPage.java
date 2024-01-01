@@ -14,11 +14,9 @@ public class FirstPage {
     public FirstPage(WebDriver driver){
         this.driver = driver;
     }
-
     public WebElement getWelcomeMessage(){
         return driver.findElement(welcomeMessageLocator);
     }
-
     public WebElement getStoreLink(){
         return driver.findElement(storeLinkLocator);
     }

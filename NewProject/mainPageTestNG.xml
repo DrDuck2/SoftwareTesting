@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+    <test name="MainPageTestingWithChrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="MainPageTest">
+                <methods>
+                    <include name="badSearchInputTest"/>
+                    <include name="goodSearchInputTest"/>
+                    <include name="signInButtonTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="MainPageTestingWithFirefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="MainPageTest">
+                <methods>
+                    <include name="badSearchInputTest"/>
+                    <include name="goodSearchInputTest"/>
+                    <include name="signInButtonTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

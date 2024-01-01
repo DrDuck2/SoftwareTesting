@@ -14,19 +14,10 @@ public class LoginPage {
     private final By passwordInput = By.name("password");
     private final By loginButton = By.name("signon");
     private final By registerButton = By.linkText("Register Now!");
+
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
-
-    public void setUsername(String username) {
-        driver.findElement(usernameInput).sendKeys(username);
-    }
-
-    public void setPassword(String password) {
-        driver.findElement(passwordInput).clear(); //When accessing the login page, "trash value" password is present
-        driver.findElement(passwordInput).sendKeys(password);
-    }
-
     public void clickLogin() {
         driver.findElement(loginButton).click();
     }
@@ -46,5 +37,14 @@ public class LoginPage {
         }catch (TimeoutException | NoSuchElementException e){
             return false;
         }
+    }
+
+    private void setUsername(String username) {
+        driver.findElement(usernameInput).sendKeys(username);
+    }
+
+    private void setPassword(String password) {
+        driver.findElement(passwordInput).clear(); //When accessing the login page, "trash value" password is present
+        driver.findElement(passwordInput).sendKeys(password);
     }
 }

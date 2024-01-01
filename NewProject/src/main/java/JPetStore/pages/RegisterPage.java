@@ -18,7 +18,9 @@ public class RegisterPage {
     private final UserInformation userInformation;
     private final AccountInformation accountInformation;
     private final ProfileInformation profileInformation;
+
     private final By saveAccountButton = By.name("newAccount");
+
     private final WebDriver driver;
 
     public RegisterPage(WebDriver driver) {
@@ -85,6 +87,8 @@ public class RegisterPage {
         try {
             WebDriverWait wait = new WebDriverWait(driver, 2);
             wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("body h1")));
+
+            //If Error Page is displayed it will have a Header with HTTP Status 500
             return driver.findElement(By.cssSelector("body h1")).getText().equals("HTTP Status 500 – Internal Server Error");
         } catch (TimeoutException | NoSuchElementException e) {
             return false;
@@ -94,6 +98,8 @@ public class RegisterPage {
     private boolean isSaveAccountPresent(){
         try{
             WebDriverWait wait = new WebDriverWait(driver, 2);
+
+            //If Save account button is present it means userId and password weren't entered
             wait.until(ExpectedConditions.presenceOfElementLocated(saveAccountButton));
             return true;
         }catch(TimeoutException | NoSuchElementException e){

@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+    <test name="RegisterPageTestingWithChrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="RegisterPageTest">
+                <methods>
+                    <parameter name="username" value="testUsername"/>
+                    <include name="registrationSuccessTest"/>
+                    <parameter name="username" value="testUsername"/>
+                    <include name="registrationWithRequiredInput"/>
+                    <include name="registrationWithNonRequiredInput"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="RegisterPageTestingWithFirefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="RegisterPageTest">
+                <methods>
+                    <parameter name="username" value="testUsername"/>
+                    <include name="registrationSuccessTest"/>
+                    <parameter name="username" value="testUsername"/>
+                    <include name="registrationWithRequiredInput"/>
+                    <include name="registrationWithNonRequiredInput"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
