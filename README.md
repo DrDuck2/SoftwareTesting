@@ -46,7 +46,7 @@ To run the tests locally, follow these steps:
 
 ## Setting up Continuous Integration with GitHub Actions
 
-To seamlessly integrate your project with a CI service, you can follow the steps outlined in the GitHub Actions documentation.
+To seamlessly integrate your project with a CI service, you can follow the steps outlined in the [GitHub Actions documentation](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven).
 
 The configuration file responsible for orchestrating the project setup and test execution in GitHub Actions is located at: .github/workflows/maven.yml.
 
