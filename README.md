@@ -69,7 +69,7 @@ To customize which tests are run during the workflow, you can make modifications
 
 This flexible setup allows you to easily control the scope and specifics of the tests run during the CI workflow.
 
-##Exploring Additional Tests
+## Exploring Additional Tests
 
 Every test in this suite is designed to run on both Chrome and Firefox browsers. The configuration is visible in the respective ..testNG.xml files, where each test class awaits the "chrome" or "firefox" parameter to specify the driver.
 
@@ -77,7 +77,7 @@ Given the constraints of the JPetStore online demo application, which lacks an i
 
 The mainPageTestNG.xml and firstPageTestNG.xml represent the only automated tests and can be executed as demonstrated in the Getting Started section.
 
-##Other Test Suites
+## Other Test Suites
 Additionally, there are three other testNG.xml files located in ./src/test/resources. Please note that these tests are designed for manual execution and are not part of the automated CI/CD workflow due to the mentioned constraints.
 
 Important Note: Testing with Chrome is analogous to testing with Firefox, as the driver switching is automated.
