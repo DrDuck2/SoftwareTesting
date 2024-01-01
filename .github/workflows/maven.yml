@@ -1,4 +1,4 @@
-name: Test
+name: Initial testing
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
           distribution: 'adopt'
           java-version: '21.0.1'
 
-      - name: Build with Maven
+      - name: Build and Test
         run: mvn -B package --file NewProject/pom.xml
 
       
