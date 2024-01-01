@@ -1,25 +1,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="MyTestSuite">
-    <test name="RegistrationTestWithChrome">
-        <parameter name = "username" value = "testingNewUsername"/>
+    <test name="FirstPageButtonTestingWithChrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="RegisterPageTest">
-                <methods>
-                    <include name="registrationSuccessProcessTest"/>
-                </methods>
-            </class>
+            <class name="FirstPageTest"/>
         </classes>
     </test>
-    <test name="RegistrationTestWithFirefox">
-        <parameter name = "username" value = "testingNewUsername2"/>
+    <test name="FirstPageButtonTestingWithFirefox">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="RegisterPageTest">
-                <methods>
-                    <include name="registrationSuccessProcessTest"/>
-                </methods>
-            </class>
+            <class name="FirstPageTest"/>
         </classes>
     </test>
 </suite>
