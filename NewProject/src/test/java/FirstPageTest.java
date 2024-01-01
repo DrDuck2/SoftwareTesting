@@ -1,7 +1,9 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -20,13 +22,18 @@ public class FirstPageTest {
     @BeforeClass
     @Parameters("browser")
     public void setupTest(String browser) {
+        System.out.println("Setting up WebDriver for browser: " + browser);
         if(browser.equalsIgnoreCase("chrome")){
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-        }else if (browser.equalsIgnoreCase("firefox")){
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
+            driver = new ChromeDriver(options);
+        } else if (browser.equalsIgnoreCase("firefox")){
             WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
-        } else{
+            FirefoxOptions options = new FirefoxOptions();
+            options.addArguments("--headless");
+            driver = new FirefoxDriver(options);
+        } else {
             throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
 
@@ -34,7 +41,8 @@ public class FirstPageTest {
         firstPage = new FirstPage(driver);
     }
     @Test
-    public void enterStoreLinkTest() throws InterruptedException {
+    public void enterStoreLinkTest() {
+        System.out.println("Executing enterStoreLinkTest");
         firstPage.clickEnterStoreLink();
 
         String expectedUrl = "https://petstore.octoperf.com/actions/Catalog.action";
@@ -47,7 +55,7 @@ public class FirstPageTest {
     }
 
     @Test(dependsOnMethods = "enterStoreLinkTest")
-    public void returnFirstPage() throws InterruptedException{
+    public void returnFirstPage() {
         driver.navigate().back();
 
         Assert.assertTrue(firstPage.getWelcomeMessage().isDisplayed(),"Not on the home page after navigating back");
