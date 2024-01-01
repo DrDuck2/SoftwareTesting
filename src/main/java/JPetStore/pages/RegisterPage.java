@@ -6,14 +6,9 @@ import JPetStore.pages.RegisterPageContainers.UserInformation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Set;
-
 public class RegisterPage {
     private final UserInformation userInformation;
     private final AccountInformation accountInformation;

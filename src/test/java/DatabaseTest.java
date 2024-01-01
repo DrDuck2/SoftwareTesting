@@ -44,7 +44,7 @@ public class DatabaseTest {
 
     @Test
     @Parameters({"username","password"})
-    private void loginRegistrationDatabaseSequenceTest(String username, String password){
+    public void loginRegistrationDatabaseSequenceTest(String username, String password){
 
         // TEST 1 -> Trying to log in with wrong credentials //
 
