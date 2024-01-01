@@ -1,4 +1,4 @@
-# Software Testing [JPetStore](https://petstore.octoperf.com/actions/Catalog.action) demo application from OctoPerf
+# Software Testing [JPetStore](https://petstore.octoperf.com/actions/Catalog.action) demo application from [OctoPerf](https://octoperf.com/)
 
 Welcome to the Software Testing project! This repository contains a Java project (Written in IntelliJ) focused on software testing using technologies such as Selenium, TestNG, and Maven.
 
