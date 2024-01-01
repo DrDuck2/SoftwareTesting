@@ -23,5 +23,4 @@ jobs:
         run: mvn -B package --file NewProject/pom.xml
 
       - name: Run Tests with TestNG
-        run: mvn test --file NewProject/firstPageTestNG.xml
-
+        run: mvn test
