@@ -58,6 +58,11 @@
             <version>3.7</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>4.0.0-M13</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
