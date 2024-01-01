@@ -41,7 +41,7 @@ jobs:
         run: sudo apt-get install maven
 
       - name: Run Maven Site (for generating reports)
-        run: mvn site
+        run: mvn clean site
 
   display-reports:
     runs-on: ubuntu-latest
