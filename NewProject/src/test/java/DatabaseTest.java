@@ -4,7 +4,9 @@ import JPetStore.pages.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -20,13 +22,18 @@ public class DatabaseTest {
     @BeforeMethod
     @Parameters("browser")
     public void setupTest(String browser) {
+        System.out.println("Setting up WebDriver for browser: " + browser);
         if(browser.equalsIgnoreCase("chrome")){
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-        }else if (browser.equalsIgnoreCase("firefox")){
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
+            driver = new ChromeDriver(options);
+        } else if (browser.equalsIgnoreCase("firefox")){
             WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
-        } else{
+            FirefoxOptions options = new FirefoxOptions();
+            options.addArguments("--headless");
+            driver = new FirefoxDriver(options);
+        } else {
             throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
 
