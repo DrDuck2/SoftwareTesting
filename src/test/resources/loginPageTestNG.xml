@@ -9,21 +9,23 @@
                 <methods>
 
                     <!-- Replace username and password with CORRECT data in database -->
-                    <parameter name="username" value="testUsername"/>
-                    <parameter name="password" value="password"/>
-                    <include name="loginSuccessTest"/>
+                    <include name="loginSuccessTest">
+                        <parameter name="username" value="testUsername"/>
+                        <parameter name="password" value="password"/>
+                    </include>
 
                     <!-- Replace username and password with INCORRECT data in database -->
-                    <parameter name="username" value="testUsername"/>
-                    <parameter name="password" value="password"/>
-                    <include name="loginFailTest"/>
+                    <include name="loginFailTest">
+                        <parameter name="username" value="testUsername"/>
+                        <parameter name="password" value="password"/>
+                    </include>
 
                 </methods>
             </class>
         </classes>
     </test>
 
-    <!-- Test Case 1: Login Page Testing with Firefox -->
+    <!-- Test Case 2: Login Page Testing with Firefox -->
     <test name="LoginPageTestingWithFirefox">
         <parameter name="browser" value="firefox"/>
         <classes>
@@ -31,14 +33,16 @@
                 <methods>
 
                     <!-- Replace username and password with CORRECT data in database -->
-                    <parameter name="username" value="testUsername"/>
-                    <parameter name="password" value="password"/>
-                    <include name="loginSuccessTest"/>
+                    <include name="loginSuccessTest">
+                        <parameter name="username" value="testUsername"/>
+                        <parameter name="password" value="password"/>
+                    </include>
 
                     <!-- Replace username and password with INCORRECT data in database -->
-                    <parameter name="username" value="testUsername"/>
-                    <parameter name="password" value="password"/>
-                    <include name="loginFailTest"/>
+                    <include name="loginFailTest">
+                        <parameter name="username" value="testUsername"/>
+                        <parameter name="password" value="password"/>
+                    </include>
 
                 </methods>
             </class>
