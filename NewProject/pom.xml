@@ -76,7 +76,8 @@
                 <version>2.22.1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>firstPageTestNG.xml</suiteXmlFile>
+                        <suiteXmlFile>mainPageTestNG</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

@@ -22,8 +22,5 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file NewProject/pom.xml
 
-      - name: Run Tests with TestNG
-        run: mvn test
-
       
 
