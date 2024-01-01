@@ -34,5 +34,32 @@ build/
 ### VS Code ###
 .vscode/
 
+# Maven
+target/
+*.iml
+
+# TestNG
+test-output/
+
+# Compiled files
+*.class
+
+# Logs
+log/
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+
+# Package Files
+*.jar
+*.war
+*.ear
+
 ### Mac OS ###
 .DS_Store
+
+# Gradle
+.gradle/
+build/
