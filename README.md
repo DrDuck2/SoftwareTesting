@@ -77,12 +77,12 @@ Given the constraints of the JPetStore online demo application, which lacks an i
 
 The mainPageTestNG.xml and firstPageTestNG.xml represent the only automated tests and can be executed as demonstrated in the Getting Started section.
 
-# Other Test Suites
+### Other Test Suites
 Additionally, there are three other testNG.xml files located in ./src/test/resources. Please note that these tests are designed for manual execution and are not part of the automated CI/CD workflow due to the mentioned constraints.
 
 Important Note: Testing with Chrome is analogous to testing with Firefox, as the driver switching is automated.
 
-Usage of 'LoginPageTest'
+#### Usage of 'LoginPageTest'
 
 Navigate to: ./src/test/resources/loginPageTestNG.xml.
 
@@ -104,7 +104,7 @@ Execution Steps:
     Suite: navigate to ./src/test/resources/loginPageTestNG.xml.
     Apply and Run.
 
-Usage of 'RegisterPageTest'
+#### Usage of 'RegisterPageTest'
 
 Navigate to: ./src/test/resources/registerPageTestNG.xml.
 
@@ -128,7 +128,7 @@ Execution Steps:
     Suite: navigate to ./src/test/resources/registerPageTestNG.xml.
     Apply and Run.
 
-Usage of 'DatabaseTest'
+#### Usage of 'DatabaseTest'
 
 Navigate to: ./src/test/resources/databaseTestNG.xml.
 
