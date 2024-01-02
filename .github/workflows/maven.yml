@@ -63,7 +63,7 @@ jobs:
 
       - name: Publish Reports on GitHub Pages
         run: |
-          cp -R target/site/* docs/
+          cp -R target/surefire-reports/* docs/
 
       - name: Commit and Push Reports
         run: |
