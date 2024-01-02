@@ -79,14 +79,14 @@ To run more tests on every push, simply add them to the pom.xml file
 
 Whenever a new commit is pushed to the main branch on GitHub, the defined workflow in maven.yml will automatically:
 
-    Build the project using Maven.
-    Execute the first two tests specified in firstPageTest.xml and mainPageTest.xml.
-    Create a 'docs' directory inside the workflow repository (Not your personal repo)
-    Copy files from target/surefire-reports/ into 'docs' directory
-    Create Artifacts for the target/surefire-reports/ (you can find artifacts in: actions-> select the workflow-> scroll down-> click on "test-reports")
+    1. Build the project using Maven.
+    2. Execute the first two tests specified in firstPageTest.xml and mainPageTest.xml.
+    3. Create a 'docs' directory inside the workflow repository (Not your personal repo)
+    4. Copy files from target/surefire-reports/ into 'docs' directory
+    5. Create Artifacts for the target/surefire-reports/ (you can find artifacts in: actions-> select the workflow-> scroll down-> click on "test-reports")
       - it will download the same files that are inside target/surefire-reports/*
-    Push 'docs' directory to your repository
-    Cleans up the workflow
+    6. Push 'docs' directory to your repository
+    7. Clean up the workflow
 
 Workflow pushes 'docs' directory to the repository so that we can use GitHubs Pages feature that allows us to display the test results online.
 
