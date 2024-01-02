@@ -40,8 +40,8 @@ jobs:
       - name: Install Maven
         run: sudo apt-get install maven
 
-      - name: Run Maven Site (for generating reports)
-        run: mvn site
+      - name: Run Maven Test (for generating reports)
+        run: mvn test
         
       - name: Copy Surefire Reports
         run: cp -R target/surefire-reports/* docs/
