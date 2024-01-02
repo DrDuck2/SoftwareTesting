@@ -41,7 +41,7 @@ jobs:
         run: sudo apt-get install maven
 
       - name: Run Maven Site (for generating reports)
-        run: mvn clean site
+        run: mvn site
 
   display-reports:
     runs-on: ubuntu-latest
@@ -74,5 +74,7 @@ jobs:
           git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
+
+      - name: Cleaning Up
+        run: mvn clean
 
