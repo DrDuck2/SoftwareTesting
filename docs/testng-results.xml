@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-02T14:49:23Z" name="MyTestSuite" finished-at="2024-01-02T14:49:39Z" duration-ms="16001">
+  <suite started-at="2024-01-02T16:39:27Z" name="MyTestSuite" finished-at="2024-01-02T16:39:46Z" duration-ms="19389">
     <groups>
     </groups>
-    <test started-at="2024-01-02T14:49:23Z" name="FirstPageButtonTestingWithChrome" finished-at="2024-01-02T14:49:26Z" duration-ms="2952">
+    <test started-at="2024-01-02T16:39:27Z" name="FirstPageButtonTestingWithChrome" finished-at="2024-01-02T16:39:35Z" duration-ms="8165">
       <class name="FirstPageTest">
-        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:FirstPageTest@143640d5]" started-at="2024-01-02T14:49:23Z" name="setupTest" finished-at="2024-01-02T14:49:26Z" duration-ms="2200" status="PASS">
+        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:FirstPageTest@143640d5]" started-at="2024-01-02T16:39:27Z" name="setupTest" finished-at="2024-01-02T16:39:34Z" duration-ms="6968" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,23 +18,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="enterStoreLinkTest()[pri:0, instance:FirstPageTest@143640d5]" started-at="2024-01-02T14:49:26Z" name="enterStoreLinkTest" finished-at="2024-01-02T14:49:26Z" duration-ms="585" status="PASS">
+        <test-method signature="enterStoreLinkTest()[pri:0, instance:FirstPageTest@143640d5]" started-at="2024-01-02T16:39:34Z" name="enterStoreLinkTest" finished-at="2024-01-02T16:39:34Z" duration-ms="873" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterStoreLinkTest -->
-        <test-method signature="returnFirstPage()[pri:0, instance:FirstPageTest@143640d5]" started-at="2024-01-02T14:49:26Z" name="returnFirstPage" finished-at="2024-01-02T14:49:26Z" depends-on-methods="FirstPageTest.enterStoreLinkTest" duration-ms="92" status="PASS">
+        <test-method signature="returnFirstPage()[pri:0, instance:FirstPageTest@143640d5]" started-at="2024-01-02T16:39:34Z" name="returnFirstPage" finished-at="2024-01-02T16:39:35Z" depends-on-methods="FirstPageTest.enterStoreLinkTest" duration-ms="148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- returnFirstPage -->
-        <test-method is-config="true" signature="teardownTest()[pri:0, instance:FirstPageTest@143640d5]" started-at="2024-01-02T14:49:26Z" name="teardownTest" finished-at="2024-01-02T14:49:26Z" duration-ms="68" status="PASS">
+        <test-method is-config="true" signature="teardownTest()[pri:0, instance:FirstPageTest@143640d5]" started-at="2024-01-02T16:39:35Z" name="teardownTest" finished-at="2024-01-02T16:39:35Z" duration-ms="168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownTest -->
       </class> <!-- FirstPageTest -->
     </test> <!-- FirstPageButtonTestingWithChrome -->
-    <test started-at="2024-01-02T14:49:26Z" name="FirstPageButtonTestingWithFirefox" finished-at="2024-01-02T14:49:39Z" duration-ms="13041">
+    <test started-at="2024-01-02T16:39:35Z" name="FirstPageButtonTestingWithFirefox" finished-at="2024-01-02T16:39:46Z" duration-ms="11216">
       <class name="FirstPageTest">
-        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:FirstPageTest@1198b989]" started-at="2024-01-02T14:49:26Z" name="setupTest" finished-at="2024-01-02T14:49:38Z" duration-ms="11829" status="PASS">
+        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:FirstPageTest@1198b989]" started-at="2024-01-02T16:39:35Z" name="setupTest" finished-at="2024-01-02T16:39:45Z" duration-ms="10039" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,27 +45,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="enterStoreLinkTest()[pri:0, instance:FirstPageTest@1198b989]" started-at="2024-01-02T14:49:38Z" name="enterStoreLinkTest" finished-at="2024-01-02T14:49:39Z" duration-ms="415" status="PASS">
+        <test-method signature="enterStoreLinkTest()[pri:0, instance:FirstPageTest@1198b989]" started-at="2024-01-02T16:39:45Z" name="enterStoreLinkTest" finished-at="2024-01-02T16:39:45Z" duration-ms="359" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterStoreLinkTest -->
-        <test-method signature="returnFirstPage()[pri:0, instance:FirstPageTest@1198b989]" started-at="2024-01-02T14:49:39Z" name="returnFirstPage" finished-at="2024-01-02T14:49:39Z" depends-on-methods="FirstPageTest.enterStoreLinkTest" duration-ms="47" status="PASS">
+        <test-method signature="returnFirstPage()[pri:0, instance:FirstPageTest@1198b989]" started-at="2024-01-02T16:39:45Z" name="returnFirstPage" finished-at="2024-01-02T16:39:45Z" depends-on-methods="FirstPageTest.enterStoreLinkTest" duration-ms="52" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- returnFirstPage -->
-        <test-method is-config="true" signature="teardownTest()[pri:0, instance:FirstPageTest@1198b989]" started-at="2024-01-02T14:49:39Z" name="teardownTest" finished-at="2024-01-02T14:49:39Z" duration-ms="749" status="PASS">
+        <test-method is-config="true" signature="teardownTest()[pri:0, instance:FirstPageTest@1198b989]" started-at="2024-01-02T16:39:45Z" name="teardownTest" finished-at="2024-01-02T16:39:46Z" duration-ms="764" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownTest -->
       </class> <!-- FirstPageTest -->
     </test> <!-- FirstPageButtonTestingWithFirefox -->
   </suite> <!-- MyTestSuite -->
-  <suite started-at="2024-01-02T14:49:39Z" name="MyTestSuite (0)" finished-at="2024-01-02T14:49:53Z" duration-ms="14096">
+  <suite started-at="2024-01-02T16:39:46Z" name="MyTestSuite (0)" finished-at="2024-01-02T16:40:00Z" duration-ms="13743">
     <groups>
     </groups>
-    <test started-at="2024-01-02T14:49:39Z" name="MainPageTestingWithChrome" finished-at="2024-01-02T14:49:43Z" duration-ms="3463">
+    <test started-at="2024-01-02T16:39:46Z" name="MainPageTestingWithChrome" finished-at="2024-01-02T16:39:49Z" duration-ms="3397">
       <class name="MainPageTest">
-        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T14:49:39Z" name="setupTest" finished-at="2024-01-02T14:49:40Z" duration-ms="848" status="PASS">
+        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T16:39:46Z" name="setupTest" finished-at="2024-01-02T16:39:47Z" duration-ms="779" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -76,15 +76,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="badSearchInputTest()[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T14:49:40Z" name="badSearchInputTest" finished-at="2024-01-02T14:49:40Z" duration-ms="275" status="PASS">
+        <test-method signature="badSearchInputTest()[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T16:39:47Z" name="badSearchInputTest" finished-at="2024-01-02T16:39:47Z" duration-ms="521" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- badSearchInputTest -->
-        <test-method is-config="true" signature="teardownTest()[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T14:49:40Z" name="teardownTest" finished-at="2024-01-02T14:49:41Z" duration-ms="68" status="PASS">
+        <test-method is-config="true" signature="teardownTest()[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T16:39:47Z" name="teardownTest" finished-at="2024-01-02T16:39:47Z" duration-ms="68" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownTest -->
-        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T14:49:41Z" name="setupTest" finished-at="2024-01-02T14:49:41Z" duration-ms="737" status="PASS">
+        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T16:39:47Z" name="setupTest" finished-at="2024-01-02T16:39:48Z" duration-ms="648" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -95,15 +95,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="goodSearchInputTest()[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T14:49:41Z" name="goodSearchInputTest" finished-at="2024-01-02T14:49:42Z" duration-ms="386" status="PASS">
+        <test-method signature="goodSearchInputTest()[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T16:39:48Z" name="goodSearchInputTest" finished-at="2024-01-02T16:39:48Z" duration-ms="369" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goodSearchInputTest -->
-        <test-method is-config="true" signature="teardownTest()[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T14:49:42Z" name="teardownTest" finished-at="2024-01-02T14:49:42Z" duration-ms="68" status="PASS">
+        <test-method is-config="true" signature="teardownTest()[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T16:39:48Z" name="teardownTest" finished-at="2024-01-02T16:39:48Z" duration-ms="68" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownTest -->
-        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T14:49:42Z" name="setupTest" finished-at="2024-01-02T14:49:43Z" duration-ms="779" status="PASS">
+        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T16:39:48Z" name="setupTest" finished-at="2024-01-02T16:39:49Z" duration-ms="641" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -114,19 +114,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="signInButtonTest()[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T14:49:43Z" name="signInButtonTest" finished-at="2024-01-02T14:49:43Z" duration-ms="234" status="PASS">
+        <test-method signature="signInButtonTest()[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T16:39:49Z" name="signInButtonTest" finished-at="2024-01-02T16:39:49Z" duration-ms="234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signInButtonTest -->
-        <test-method is-config="true" signature="teardownTest()[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T14:49:43Z" name="teardownTest" finished-at="2024-01-02T14:49:43Z" duration-ms="68" status="PASS">
+        <test-method is-config="true" signature="teardownTest()[pri:0, instance:MainPageTest@197d671]" started-at="2024-01-02T16:39:49Z" name="teardownTest" finished-at="2024-01-02T16:39:49Z" duration-ms="67" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownTest -->
       </class> <!-- MainPageTest -->
     </test> <!-- MainPageTestingWithChrome -->
-    <test started-at="2024-01-02T14:49:43Z" name="MainPageTestingWithFirefox" finished-at="2024-01-02T14:49:53Z" duration-ms="10631">
+    <test started-at="2024-01-02T16:39:49Z" name="MainPageTestingWithFirefox" finished-at="2024-01-02T16:40:00Z" duration-ms="10344">
       <class name="MainPageTest">
-        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T14:49:43Z" name="setupTest" finished-at="2024-01-02T14:49:46Z" duration-ms="2717" status="PASS">
+        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T16:39:49Z" name="setupTest" finished-at="2024-01-02T16:39:51Z" duration-ms="1992" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -137,15 +137,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="badSearchInputTest()[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T14:49:46Z" name="badSearchInputTest" finished-at="2024-01-02T14:49:46Z" duration-ms="387" status="PASS">
+        <test-method signature="badSearchInputTest()[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T16:39:51Z" name="badSearchInputTest" finished-at="2024-01-02T16:39:52Z" duration-ms="318" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- badSearchInputTest -->
-        <test-method is-config="true" signature="teardownTest()[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T14:49:46Z" name="teardownTest" finished-at="2024-01-02T14:49:47Z" duration-ms="646" status="PASS">
+        <test-method is-config="true" signature="teardownTest()[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T16:39:52Z" name="teardownTest" finished-at="2024-01-02T16:39:53Z" duration-ms="1148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownTest -->
-        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T14:49:47Z" name="setupTest" finished-at="2024-01-02T14:49:49Z" duration-ms="2040" status="PASS">
+        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T16:39:53Z" name="setupTest" finished-at="2024-01-02T16:39:55Z" duration-ms="1922" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -156,15 +156,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="goodSearchInputTest()[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T14:49:49Z" name="goodSearchInputTest" finished-at="2024-01-02T14:49:49Z" duration-ms="364" status="PASS">
+        <test-method signature="goodSearchInputTest()[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T16:39:55Z" name="goodSearchInputTest" finished-at="2024-01-02T16:39:55Z" duration-ms="332" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goodSearchInputTest -->
-        <test-method is-config="true" signature="teardownTest()[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T14:49:49Z" name="teardownTest" finished-at="2024-01-02T14:49:50Z" duration-ms="1044" status="PASS">
+        <test-method is-config="true" signature="teardownTest()[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T16:39:55Z" name="teardownTest" finished-at="2024-01-02T16:39:56Z" duration-ms="1150" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownTest -->
-        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T14:49:50Z" name="setupTest" finished-at="2024-01-02T14:49:52Z" duration-ms="2125" status="PASS">
+        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T16:39:56Z" name="setupTest" finished-at="2024-01-02T16:39:58Z" duration-ms="2022" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -175,11 +175,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="signInButtonTest()[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T14:49:52Z" name="signInButtonTest" finished-at="2024-01-02T14:49:52Z" duration-ms="254" status="PASS">
+        <test-method signature="signInButtonTest()[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T16:39:58Z" name="signInButtonTest" finished-at="2024-01-02T16:39:58Z" duration-ms="206" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signInButtonTest -->
-        <test-method is-config="true" signature="teardownTest()[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T14:49:52Z" name="teardownTest" finished-at="2024-01-02T14:49:53Z" duration-ms="1050" status="PASS">
+        <test-method is-config="true" signature="teardownTest()[pri:0, instance:MainPageTest@5a955565]" started-at="2024-01-02T16:39:58Z" name="teardownTest" finished-at="2024-01-02T16:40:00Z" duration-ms="1253" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownTest -->
