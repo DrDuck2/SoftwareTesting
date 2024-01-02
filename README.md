@@ -83,17 +83,34 @@ Whenever a new commit is pushed to the main branch on GitHub, the defined workfl
     Execute the first two tests specified in firstPageTest.xml and mainPageTest.xml.
     Create a 'docs' directory inside the workflow repository (Not your personal repo)
     Copy files from target/surefire-reports/ into 'docs' directory
-    Create Artifacts for the target/surefire-reports/
+    Create Artifacts for the target/surefire-reports/ (you can find artifacts in: actions-> select the workflow-> scroll down-> click on "test-reports")
+      - it will download the same files that are inside target/surefire-reports/*
     Push 'docs' directory to your repository
     Cleans up the workflow
 
 Workflow pushes 'docs' directory to the repository so that we can use GitHubs Pages feature that allows us to display the test results online.
 
-!CAUTION! - You have to give permission for writing 
+!CAUTION! - You have to give permission to 'Actions' so that it Push files to your repository.
+To do this you have to follow these steps:
+  1. Go to settings
+  2. Go to Actions
+  3. Select General
+  4. Scroll down to Workflow Permissions
+  5. Select Read and Write permissions
+Now GitHub Actions can Push files to your repository
 
 ## GitHub Pages Overview
 
-GitHub Pages allows us to display test reports online. If you want to setup your own GitHub Page
+GitHub Pages allows us to display test reports online. If you want to setup your own GitHub Page you have to follow these steps:
+  1. Go to Settings
+  2. Go to Pages
+  3. Select your branch (mine is set to 'main')
+  4. Select your file (it can be /(root) or /docs, since we copied the files to 'docs/' put /docs)
+  5. Save the configuration
+
+After every push to the repository on the main branch, workflow will build the project, execute tests and it will create reports on those tests. After that worfklow is done, Pages workflow will run and it will create a website for you to see these reports visually.
+
+The link is usually in this format: 'https://<username>.github.io/<repository-name>'
 
 ## Customizing Test Execution
 
