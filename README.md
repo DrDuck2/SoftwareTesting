@@ -18,13 +18,13 @@ If you want to contribute to the project, ensure you have following requirements
 - From [Maven Repository](https://mvnrepository.com/)
   -  selenium-java (version 3.12.0 or later)
   -  testng (version 6.14.3 or later)
-  -  maven-surefire-report-plugin (version 2.22.1 or later)
-  -  maven-compiler-plugin (version 3.11.0 or later)
+  -  maven-surefire-report-plugin (version 3.2.3 or later)
+  -  maven-compiler-plugin (version 3.12.1 or later)
 
 - For WebDriverManager
   - [WebDriverManager](https://github.com/bonigarcia/webdrivermanager) version 5.6.2 or later 
 
-Dependencies are located in this project inside the pom.xml file.
+Dependencies are located in this project inside the pom.xml file, use the same versions or later.
 
 ## Getting Started
 
@@ -44,11 +44,36 @@ To run the tests locally, follow these steps:
 5. Apply and Run the test!
 
 
+## Creating Reports
+
+To create reports locally you can do two different things, either install Mavel as a plugin or install it as a software on your machine.
+
+If you choose to [install](https://phoenixnap.com/kb/install-maven-windows) it on your machine follow these steps:
+
+1. Open Command Prompt
+2. Navigate to project folder
+3. Run command: mvn test
+4. Target file should be created inside the project folder
+5. Navigate to ./target/surefire-reports/index.html
+6. Report should open up in your browser
+
+If you choose to install it as a plugin, follow these steps:
+For IntelliJ:
+
+  1. Navigate to the right side of the program
+  2. If you installed plugin correctly, under the notifications (bell icon) there should be an 'm' (maven icon). Click on it
+  3. On the top toolbar select "execute maven goal"
+  4. Run: mvn test
+  5. After finishing the same target file will apear in the project folder
+
+
 ## Setting up Continuous Integration with GitHub Actions
 
 To seamlessly integrate your project with a CI service, you can follow the steps outlined in the [GitHub Actions documentation](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven).
 
 The configuration file responsible for orchestrating the project setup and test execution in GitHub Actions is located at: .github/workflows/maven.yml.
+
+To run more tests on every push, simply add them to the pom.xml file
 
 ## Workflow Overview
 
@@ -56,6 +81,19 @@ Whenever a new commit is pushed to the main branch on GitHub, the defined workfl
 
     Build the project using Maven.
     Execute the first two tests specified in firstPageTest.xml and mainPageTest.xml.
+    Create a 'docs' directory inside the workflow repository (Not your personal repo)
+    Copy files from target/surefire-reports/ into 'docs' directory
+    Create Artifacts for the target/surefire-reports/
+    Push 'docs' directory to your repository
+    Cleans up the workflow
+
+Workflow pushes 'docs' directory to the repository so that we can use GitHubs Pages feature that allows us to display the test results online.
+
+!CAUTION! - You have to give permission for writing 
+
+## GitHub Pages Overview
+
+GitHub Pages allows us to display test reports online. If you want to setup your own GitHub Page
 
 ## Customizing Test Execution
 
