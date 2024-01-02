@@ -21,31 +21,10 @@ jobs:
 
       - name: Build and Test
         run: mvn -B package
-        
-  generate-reports:
-    runs-on: ubuntu-latest
-
-    needs: test
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Set up JDK
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'adopt'
-          java-version: '21.0.1'  # Adjust as needed
-
-      - name: Install Maven
-        run: sudo apt-get install maven
-
-      - name: Run Maven Test (for generating reports)
-        run: mvn test
 
       - name: Create Docs Directory
         run: mkdir -p docs/
-        
+
       - name: Copy Surefire Reports
         run: cp -R target/surefire-reports/* docs/
 
