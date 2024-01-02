@@ -110,7 +110,7 @@ GitHub Pages allows us to display test reports online. If you want to setup your
 
 After every push to the repository on the main branch, workflow will build the project, execute tests and it will create reports on those tests. After that worfklow is done, Pages workflow will run and it will create a website for you to see these reports visually.
 
-The link is usually in this format: 'https://<username>.github.io/<repository-name>'
+The link is usually in this format: 'https://username.github.io/repository-namr'
 
 ## Customizing Test Execution
 
