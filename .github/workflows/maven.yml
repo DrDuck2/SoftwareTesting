@@ -64,6 +64,12 @@ jobs:
           distribution: 'adopt'
           java-version: '21.0.1'  # Adjust as needed
 
+      - name: Publish Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+            name: test-reports
+            path: target/surefire-reports/
+
       - name: Commit and Push Reports
         run: |
           git config --global user.name "${{ github.actor }}"
