@@ -90,7 +90,7 @@ Whenever a new commit is pushed to the main branch on GitHub, the defined workfl
 
 Workflow pushes 'docs' directory to the repository so that we can use GitHubs Pages feature that allows us to display the test results online.
 
-!CAUTION! - You have to give permission to 'Actions' so that it Push files to your repository.
+!CAUTION! - You have to give permission to 'Actions' so that it can Push files to your repository.
 To do this you have to follow these steps:
   1. Go to settings
   2. Go to Actions
