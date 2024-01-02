@@ -61,7 +61,7 @@ jobs:
       - name: Publish Reports on GitHub Pages
         run: |
           mkdir -p docs
-          cp -R target/site docs/
+          cp -R target/site docs
 
       - name: Commit and Push Reports
         run: |
