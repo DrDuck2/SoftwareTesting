@@ -58,6 +58,9 @@ jobs:
           distribution: 'adopt'
           java-version: '21.0.1'  # Adjust as needed
 
+      - name: Copy Surefire Reports
+        run: cp -R target/surefire-reports/* docs/
+
       - name: Publish Reports on GitHub Pages
         run: |
           mkdir -p docs
